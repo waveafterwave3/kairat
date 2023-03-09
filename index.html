@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Getting Ticket</title>
+	<style>
+		@font-face {
+			font-family: work-sans;
+			src: url(fonts/WorkSans-VariableFont_wght.ttf);
+		}
+		body {
+			background-image: url(pic/midic3.png);
+			background-size:cover;
+			font-family: Work-sans;
+			margin: 0;
+			padding: 0;
+			font-size: large;
+		}
+
+		#logo {
+			padding-left: 15	px;
+			padding-top: 80px;
+			width: 120px;
+			height: 230px;
+		}
+		#fullName{
+			font-size: large;
+			font-family: Work-sans;
+		}
+		#email{
+			font-size: large;
+			font-family: Work-sans;
+		}
+		#specialty{
+			font-size: large;
+			font-family: Work-sans;
+		}
+		#course{
+			font-size: large;
+			font-family: Work-sans;
+		}
+		header {
+			height: 70px;
+			padding: 10px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+		#links {
+			font-family: Work-sans;
+		}
+
+		header img {
+			height: 50px;
+			margin-right: 20px;
+		}
+
+		header a {
+			color: white;
+			font-size: 20px;
+			margin-right: 20px;
+			text-decoration: none;
+		}
+
+		form {
+			background-color: rgb(250, 225, 0);
+			padding: 20px;
+			margin: auto;
+			border-radius: 12px;
+			width: 500px;
+			margin-top: 10px;
+			padding-bottom: 50px;
+		}
+
+		input[type="text"],
+input[type="email"],
+select {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 0px;
+    border: none;
+    border-bottom: 2px solid #000000;
+    background: none;
+    font-family: Work-sans;
+    font-size: large;
+    line-height: 1.75; /* добавлено */
+}
+
+		input[type="text"]:focus,
+		input[type="email"]:focus,
+		select:focus {
+			outline: none;
+			border-color: #000000;
+		}
+
+		input[type="submit"] {
+			display: block;
+			width: 100%;
+			background-color: #000000;
+			font-family: Work-sans;
+			font-size: large;
+			color: white;
+			padding: 14px 20px;
+			margin: 8px 0;
+			border: none;
+			border-radius: 12px;
+			cursor: pointer;
+			margin-top: 30px;
+		}
+
+		input[type="submit"]:hover {
+			background-color: #000000;
+		}
+		/* стили для устройств с шириной экрана меньше 600px */
+@media only screen and (max-width: 600px) {
+  /* уменьшаем размер шрифта на всем сайте */
+  body {
+    font-size: medium;
+  }
+  
+  /* изменяем стили для логотипа */
+  #logo {
+    width: 80px;
+    height: 150px;
+  }
+  
+  /* изменяем стили для заголовка формы */
+  form h1 {
+    font-size: medium;
+  }
+  
+  /* изменяем стили для ссылок в хедере */
+  header a {
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  
+  /* изменяем ширину формы и убираем отступ сверху */
+  form {
+    width: 90%;
+    margin-top: 0;
+  }
+  
+  /* изменяем отступы и размеры полей ввода и кнопки */
+  input[type="text"],
+  input[type="email"],
+  select,
+  input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    font-size: medium;
+  }
+}
+
+	</style>
+</head>
+<body>
+	<header>
+	  <img src="pic/logo.png" alt="Logo" id="logo">
+	  <div id="Links">
+		<a href="#">Support</a>
+		<a href="#">Official Site</a>
+	  </div>
+	</header>
+	<form>
+	<h1 style="text-align: center;">Getting ticket</h1>
+	  <label for="fullName"></label>
+	  <input type="text" id="fullName" name="fullName" required placeholder="Full Name">
+  
+	  <label for="email"></label>
+	  <input type="email" id="email" name="email" required placeholder="Email">
+	  <label for="course"></label>
+	  <select id="course" name="course">
+		<option value="1">1st Course</option>
+		<option value="2">2nd Course</option>
+		<option value="3">3rd Course</option>
+		<option value="4">4th Course</option>
+	  </select>
+  
+	  <label for="specialty"></label>
+	  <input type="text" id="specialty" name="specialty" required placeholder="Specialty">
+  
+	  <input type="submit" value="Submit">
+	</form>
+  
+	<script>
+	  const form = document.querySelector("form");
+	  form.addEventListener("submit", function(event) {
+		event.preventDefault();
+		window.location.href = "success.html";
+	  });
+	</script>
+  </body>
+  
+</html>
